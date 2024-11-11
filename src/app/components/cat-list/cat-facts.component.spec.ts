@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { CatFactsComponent } from './cat-facts.component';
+import {CatFactsComponent} from './cat-facts.component';
 
 describe('CatFactComponent', () => {
   let component: CatFactsComponent;

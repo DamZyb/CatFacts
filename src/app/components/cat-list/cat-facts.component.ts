@@ -1,7 +1,9 @@
 import {
   AfterViewInit,
   Component,
-  ElementRef, OnDestroy, OnInit,
+  ElementRef,
+  OnDestroy,
+  OnInit,
   signal,
   ViewChild,
   WritableSignal
@@ -10,7 +12,7 @@ import {CatFactService} from './cat-list.service';
 import {CatFactComponent} from '../cat-fact/cat-fact.component';
 import {CatFact} from './cat-fact';
 import {JsonPipe} from '@angular/common';
-import {from, map, mergeAll, mergeMap} from 'rxjs';
+import {from, map, mergeMap} from 'rxjs';
 
 @Component({
   selector: 'app-cat-list',
@@ -46,7 +48,7 @@ export class CatFactsComponent implements OnDestroy, OnInit, AfterViewInit {
 
   private loadData() {
     this.catFactService.getText().pipe(mergeMap(facts => from(facts.data)), map(value => {
-      return {data: value} as CatFact
+      return {quote: value} as CatFact
     })).subscribe((data: CatFact) => {
       let currentData = this.data()
       currentData.add(data)

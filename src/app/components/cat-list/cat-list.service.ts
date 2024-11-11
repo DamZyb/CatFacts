@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {distinct, Observable} from 'rxjs';
-import {CatFact, CatFacts} from './cat-fact';
+import {Observable} from 'rxjs';
+import {CatFacts} from './cat-fact';
 
 @Injectable({
   providedIn: 'root'

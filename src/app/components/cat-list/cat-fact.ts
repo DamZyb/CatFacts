@@ -1,5 +1,5 @@
 export interface CatFact {
-  data: string;
+  quote: string;
 }
 
 export interface CatFacts {

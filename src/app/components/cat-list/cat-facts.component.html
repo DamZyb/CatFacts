@@ -5,7 +5,7 @@
 
   @for (fact of data(); track fact) {
     @defer (on viewport) {
-      <app-cat-fact [fact]="fact.data"/>
+      <app-cat-fact [fact]="fact.quote"/>
     } @placeholder (minimum 300ms) {
       <div class="loader-container">
         <div class="loader"></div>
