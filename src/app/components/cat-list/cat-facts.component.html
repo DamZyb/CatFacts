@@ -1,0 +1,16 @@
+<header>
+  <h1>{{ title }}</h1>
+</header>
+<main>
+
+  @for (fact of data(); track fact) {
+    @defer (on viewport) {
+      <app-cat-fact [fact]="fact.data"/>
+    } @placeholder (minimum 300ms) {
+      <div class="loader-container">
+        <div class="loader"></div>
+      </div>
+    }
+  }
+  <div #anchor></div>
+</main>

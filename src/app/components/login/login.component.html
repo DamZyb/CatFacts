@@ -1,0 +1,23 @@
+<div class="form-container">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="input-container">
+      <label class="form-label" for="username">Username:</label>
+      <input class="form-control" id="username" formControlName="username" type="text"/>
+      <div class="error">
+        @if (isInvalid('username')) {
+          {{ getErrorMessage('username') }}
+        }
+      </div>
+    </div>
+    <div class="input-container">
+      <label class="form-label" for="password">Password:</label>
+      <input class="form-control" id="password" formControlName="password" type="password"/>
+      <div class="error">
+        @if (isInvalid('password')) {
+          {{ getErrorMessage('password') }}
+        }
+      </div>
+    </div>
+    <button class="submit" type="submit" [disabled]="form.invalid">Login</button>
+  </form>
+</div>

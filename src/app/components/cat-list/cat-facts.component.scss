@@ -1,0 +1,42 @@
+
+header {
+  width: 100%;
+  background: white;
+  position: fixed;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  color: #ff6a00;
+
+  h1 {
+    padding-left: 40px;
+  }
+}
+
+main {
+  padding-top: 100px;
+
+  .loader-container {
+    display: flex;
+    justify-content: center;
+
+
+    .loader {
+      width: 25px;
+      height: 25px;
+      border: 6px solid #fa0;
+      border-top: 6px solid tomato;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+  }
+
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+
+}
